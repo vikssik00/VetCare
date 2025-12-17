@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252075433993",
+    "project_id": "vetcare-aed8a",
+    "storage_bucket": "vetcare-aed8a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252075433993:android:6ccfa9a2173cbcacebd8d8",
+        "android_client_info": {
+          "package_name": "com.example.vetcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvZzNv7FQ9-0RXTixI8aZ-hrb2cDJlYR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
