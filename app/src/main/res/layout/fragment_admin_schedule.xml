@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_app">
+
+    <!-- Заголовок (динамический) -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Управление расписанием"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white" />
+
+    <!-- Кнопка добавления расписания -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Добавить смену врача"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/white"
+        app:cornerRadius="12dp" />
+
+    <!-- Сегментированное управление -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_background"
+        android:padding="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewSchedule"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Расписание"
+            android:backgroundTint="@color/primary"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            android:layout_marginEnd="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnManageVets"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Ветеринары"
+            android:backgroundTint="@color/primary"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="2dp" />
+
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginVertical="20dp" />
+
+    <!-- Сообщение когда нет данных -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Нет данных для отображения"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginVertical="40dp"
+        android:textColor="@color/white" />
+
+    <!-- Контейнер для списка -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/scheduleListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp" />
+
+    </ScrollView>
+
+</LinearLayout>

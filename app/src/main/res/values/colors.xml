@@ -1,7 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="white">#FFFFFFFF</color>
-    <color name="primary">#FF464141</color>
-    <color name="text_color">#FF464141</color>
-    <color name="field_background">#80FFFFFF</color>
+    <!-- Основная палитра -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_light">#8EC5FF</color>
+    <color name="primary_dark">#135BA1</color>
+
+    <!-- Дополнительные цвета -->
+    <color name="accent">#FFC107</color>
+    <color name="text_color">#212121</color>
+    <color name="text_secondary">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_light">#F8FBFF</color>
+    <color name="surface">#FAFAFA</color>
+    <color name="muted_text">#80646464</color>
+
+    <!-- Новые цвета для градиентов -->
+    <color name="gradient_start">#FF8EC5FF</color>
+    <color name="gradient_center">#FF5A9CFF</color>
+    <color name="gradient_end">#FF1976D2</color>
+    <color name="field_background">#F5F5F5</color>
+
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_light_secondary">#E0E0E0</color>
+
+    <!-- Новые цвета для статусов -->
+    <color name="green">#FF4CAF50</color>
+    <color name="blue">#FF2196F3</color>
+    <color name="red">#FFF44336</color>
+    <color name="orange">#FFFF9800</color>
+
+    <color name="button_blue">#FF2196F3</color>
+    <color name="button_green">#FF4CAF50</color>
+    <color name="button_red">#FFF44336</color>
+
+    <color name="error_red">#F44336</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="medium_gray">#E0E0E0</color>
+    <color name="dark_gray">#666666</color>
+
+    <color name="gray">#9E9E9E</color>
+    <color name="info_blue">#2196F3</color>
+    <color name="warning_orange">#FF9800</color>
+
 </resources>

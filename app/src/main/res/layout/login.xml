@@ -3,15 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- Фоновая картинка -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background_image"
-        android:contentDescription="фон приложения" />
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Вход"
-                android:textColor="@color/text_color"
+                android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -41,18 +34,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Войдите в свою учетную запись"
-                android:textColor="@color/text_color"
+                android:textColor="@color/text_light_secondary"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="48dp"
                 android:layout_gravity="center_horizontal" />
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Эл. почта"
-                android:textColor="@color/text_color"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="14sp" />
 
@@ -62,21 +54,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/email_field"
+                android:background="@drawable/edit_text_background"
                 android:hint="Введите email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
-                android:paddingEnd="56dp"
+                android:paddingEnd="16dp"
                 android:paddingBottom="16dp"
-                android:textColor="@color/text_color"
-                android:textColorHint="#80646464" />
+                android:textColor="@color/white"
+                android:textColorHint="#CCFFFFFF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Пароль"
-                android:textColor="@color/text_color"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:layout_marginTop="24dp" />
@@ -86,30 +78,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="Введите пароль"
-                android:textColor="@color/text_color"
-                android:textColorHint="#80646464"
-                android:background="@drawable/password_field"
+                android:textColor="@color/white"
+                android:textColorHint="#CCFFFFFF"
+                android:background="@drawable/edit_text_background"
                 android:paddingStart="16dp"
-                android:paddingEnd="56dp"
+                android:paddingEnd="16dp"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:layout_marginTop="8dp"
                 android:inputType="textPassword" />
+
+            <!-- Добавьте после пароля, например: -->
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Запомнить меня"
+                android:textColor="@color/text_color"/>
+
             <!-- Забыли пароль? -->
             <TextView
-                android:id="@+id/forgot_password"
+                android:id="@+id/tvForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
+                android:text="Забыли пароль?"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:minHeight="48dp"
-                android:padding="12dp"
-                android:text="Забыли пароль?"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textStyle="bold"/>
 
             <!-- Кнопка Входа -->
             <com.google.android.material.button.MaterialButton
@@ -117,14 +118,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
-                android:backgroundTint="@color/primary"
+                android:backgroundTint="@color/white"
                 android:text="Войти"
-                android:textColor="@color/white"
+                android:textColor="@color/primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:cornerRadius="15dp"
-                app:strokeColor="@color/primary"
-                app:strokeWidth="2dp" />
+                app:cornerRadius="15dp" />
 
             <!-- Ссылка на регистрацию -->
             <TextView
@@ -138,7 +137,7 @@
                 android:minHeight="48dp"
                 android:padding="12dp"
                 android:text="Нет аккаунта? Зарегистрироваться"
-                android:textColor="@color/primary"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="14sp" />
 

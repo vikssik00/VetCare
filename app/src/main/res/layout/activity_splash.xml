@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_premium"
+    android:padding="40dp">
+
+    <!-- Стильный логотип с тенью -->
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logo_with_shadow"
+        android:contentDescription="VetCare Logo" />
+
+    <!-- Главное название -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VetCare"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="28dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:letterSpacing="0.03" />
+
+    <!-- Элегантный подзаголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Профессиональная ветеринарная помощь"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="14dp"
+        android:alpha="0.9"
+        android:letterSpacing="0.01"
+        android:gravity="center" />
+
+    <!-- Стильная разделительная линия -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:alpha="0.6"
+        android:layout_marginTop="24dp" />
+
+    <!-- Декоративный прогресс-бар -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:indeterminate="true"
+        app:indicatorColor="@color/white"
+        app:trackColor="#60FFFFFF"
+        app:indicatorSize="32dp" />
+
+    <!-- Изящная подпись -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваш надёжный партнёр в заботе о питомцах"
+        android:textSize="13sp"
+        android:textColor="#CCFFFFFF"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp" />
+
+</LinearLayout>

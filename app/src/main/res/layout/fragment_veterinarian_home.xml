@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_app"
+    android:padding="24dp">
+
+    <!-- Верхняя панель: Приветствие и кнопки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добро пожаловать!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvTodayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня"
+                android:textSize="14sp"
+                android:textColor="@color/text_light_secondary"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Разделительная линия -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Статистика за сегодня -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статистика за сегодня"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Первый ряд карточек -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Пациенты -->
+        <LinearLayout
+            android:id="@+id/cardPatients"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/statIconPatients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👥"
+                android:textSize="24sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statTitlePatients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пациенты"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statValuePatients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+
+        <!-- Завершенные приемы -->
+        <LinearLayout
+            android:id="@+id/cardCompleted"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/statIconCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅"
+                android:textSize="24sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statTitleCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Завершено"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statValueCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Второй ряд карточек -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <!-- Ожидают -->
+        <LinearLayout
+            android:id="@+id/cardWaiting"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/statIconWaiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏳"
+                android:textSize="24sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statTitleWaiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ожидают"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statValueWaiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+
+        <!-- Доход -->
+        <LinearLayout
+            android:id="@+id/cardRevenue"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/statIconRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💰"
+                android:textSize="24sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statTitleRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Доход"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/statValueRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 ₽"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginVertical="16dp"/>
+
+    <!-- Быстрые действия -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Быстрые действия"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Сообщение при отсутствии пациентов -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/text_light_secondary"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"/>
+
+    <!-- RecyclerView для списка пациентов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <!-- Кнопка переключения списка пациентов -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnViewPatients"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Пациенты на сегодня"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primary"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="1dp"
+        app:cornerRadius="12dp"/>
+
+</LinearLayout>

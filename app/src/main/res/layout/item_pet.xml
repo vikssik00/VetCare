@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="2dp"
+    card_view:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <!-- Заголовок карточки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPetName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Кличка питомца"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!-- Маленькая иконка лапки -->
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_paw_small"
+                android:contentDescription="лапка"
+                card_view:tint="@color/primary" />
+        </LinearLayout>
+
+        <!-- Информация о питомце -->
+        <TextView
+            android:id="@+id/tvPetSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вид: Собака"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPetBirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата рождения: 2000-01-01"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvPetMedicalHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мед. история: здоров"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Кнопки действий - ИЗМЕНЕНО: теперь 3 кнопки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <!-- Кнопка редактирования -->
+            <Button
+                android:id="@+id/btnEditPet"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="✏️ Изменить"
+                android:textSize="12sp"
+                android:backgroundTint="@color/primary_light"
+                android:textColor="@color/white"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+
+            <!-- Кнопка удаления -->
+            <Button
+                android:id="@+id/btnDeletePet"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="🗑️ Удалить"
+                android:textSize="12sp"
+                android:backgroundTint="#FFEBEE"
+                android:textColor="#F44336"
+                android:layout_marginStart="2dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

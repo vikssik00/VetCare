@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="user_roles">
+        <item>Владелец питомца</item>
+        <item>Ветеринар</item>
+        <!-- Администратор НЕ в списке - назначается автоматически -->
+    </string-array>
+</resources>

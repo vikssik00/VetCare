@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Выбор ветеринара -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ветеринар *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerVeterinarian"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Дата -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Выберите дату"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/muted_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Время начала -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время начала *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="09:00"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/muted_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Время окончания -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время окончания *"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="18:00"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/muted_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Максимальное количество записей -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Максимальное количество записей"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etMaxAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="10"
+            android:inputType="number"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/muted_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Статус доступности -->
+        <CheckBox
+            android:id="@+id/cbIsAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Доступен для записи"
+            android:checked="true"
+            android:textSize="14sp"
+            android:textColor="@color/text_color" />
+
+        <!-- Подсказка -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* - обязательные поля"
+            android:textSize="12sp"
+            android:textColor="@color/muted_text"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>
